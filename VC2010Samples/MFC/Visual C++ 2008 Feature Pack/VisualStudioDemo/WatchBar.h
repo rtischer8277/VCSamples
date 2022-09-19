@@ -14,6 +14,11 @@
 
 class CWatchBar : public CDockablePane
 {
+	virtual BOOL CanAdjustLayout() const
+	{
+		return !m_bIsSliding || !m_bIsHiding;
+	}
+
 // Construction
 public:
 	CWatchBar();
